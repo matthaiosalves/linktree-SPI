@@ -24,7 +24,7 @@
     'Águas claras': 'https://forms.gle/v9qjucYLjRJMhqSn7',
     'Asa norte': '#',
     'Asa sul': '#',
-    'Cruzeiro': '#',
+    'Cruzeiro': 'https://forms.gle/V5jowA6vHWotJyEXA',
     'Guará': '#'
   };
 
@@ -36,11 +36,18 @@
 
     aElement.href = locaisComLinks[local];
     aElement.className = 'link';
+
+    // Adicione a verificação para aplicar o filtro de brilho se o link for '#'
+    if (locaisComLinks[local] === '#') {
+      aElement.style.filter = 'brightness(0.5)';
+    }
+
     aElement.innerHTML = `<i class="fab fa-youtube"></i> ${local}`;
 
     liElement.appendChild(aElement);
     ulElement.appendChild(liElement);
   });
+
 </script>
 </body>
 </html>

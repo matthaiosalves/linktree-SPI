@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
   <meta http-equiv=”Content-Type” content=”text/html; charset=utf-8″ />
@@ -23,7 +23,7 @@
 <body>
 <section class="wrap">
   <div class="profile">
-    <img src="./tesrt.png" class="photo">
+    <img src="./logo.png" class="photo">
     <span class="profile_name">SPI - Pedidos de serviço</span>
     <a href="mailto:marcosrobertodt@gmail.com" class="at">marcosrobertodt@gmail.com</a>
   </div>
@@ -44,7 +44,6 @@
     'SQS 202 (Sul)': '#',
     'VINAVI': '#',
     'Vistoria': 'https://wa.me/556134291421'
-
   };
 
   const ulElement = document.getElementById('locaisList');
@@ -60,7 +59,7 @@
       aElement.style.filter = 'brightness(0.5)';
     }
 
-    aElement.innerHTML = `<i class="fab fa-youtube"></i> ${local}`;
+    aElement.innerHTML = `${local}`;
 
     liElement.appendChild(aElement);
     ulElement.appendChild(liElement);

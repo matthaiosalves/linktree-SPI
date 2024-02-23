@@ -48,22 +48,40 @@
 
   const ulElement = document.getElementById('locaisList');
 
-  Object.keys(locaisComLinks).forEach(local => {
-    const liElement = document.createElement('li');
-    const aElement = document.createElement('a');
+  // Object.keys(locaisComLinks).forEach(local => {
+  //   const liElement = document.createElement('li');
+  //   const aElement = document.createElement('a');
 
-    aElement.href = locaisComLinks[local];
-    aElement.className = 'link';
+  //   aElement.href = locaisComLinks[local];
+  //   aElement.className = 'link';
 
-    if (locaisComLinks[local] === '#') {
-      aElement.style.filter = 'brightness(0.5)';
-    }
+  //   if (locaisComLinks[local] === '#') {
+  //     aElement.style.filter = 'brightness(0.5)';
+  //   }
 
-    aElement.innerHTML = `${local}`;
+  //   aElement.innerHTML = `${local}`;
 
-    liElement.appendChild(aElement);
-    ulElement.appendChild(liElement);
-  });
+  //   liElement.appendChild(aElement);
+  //   ulElement.appendChild(liElement);
+  // });
+
+   Object.keys(locaisComLinks).forEach(local => {
+      const liElement = document.createElement('li');
+      const aElement = document.createElement('a');
+
+      aElement.href = locaisComLinks[local];
+      aElement.className = 'link';
+      aElement.target = '_blank'; // Adiciona target="_blank"
+
+      if (locaisComLinks[local] === '#') {
+        aElement.style.filter = 'brightness(0.5)';
+      }
+
+      aElement.innerHTML = `${local}`;
+
+      liElement.appendChild(aElement);
+      ulElement.appendChild(liElement);
+    });
 
 </script>
 </body>

@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <meta name="keywords"
     content="SPI, pedidos de serviço, marinha do brasil, hotel, pnr" />
+  <meta name="description" content="Pedidos de serviço">
   <meta name="theme-color" content="#4f6485" />
   <meta property="og:url" content="https://marcosdt.netlify.app/" />
   <meta property="og:type" content="website" />
@@ -18,13 +19,13 @@
   <meta property="og:site_name" content="Pedidos de serviço" />
   <title>Pedidos de serviço</title>
   <link rel="shortcut icon" href="./logoo.png">
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./style.min.css">
 </head>
 <body>
   
 <section class="wrap">
   <div class="profile">
-    <img src="./logo.png" class="photo" width="75" height="75">
+    <img src="./logo.png" class="photo" width="75" height="75" alt="Logo do SPI">
     <span class="profile_name">SPI - Pedidos de serviço</span>
     <a href="mailto:marcosrobertodt@gmail.com" class="at">marcosrobertodt@gmail.com</a>
   </div>
@@ -34,37 +35,6 @@
   </div>
 </section>
 
-<script>
-  const locaisComLinks = {
-    'Águas Claras / Areal': 'https://forms.gle/v9qjucYLjRJMhqSn7',
-    'Asa Norte': 'https://forms.gle/nHhmyexeb6bHSUjs9',
-    'Cruzeiro / Sudoeste': 'https://forms.gle/V5jowA6vHWotJyEXA',
-    'Guará': 'https://forms.gle/my5Jq6yhEqDV7LuF6',
-    'Lago': 'https://forms.gle/W7foHKnxGG6rMmfs5',
-    'SQS 113 (Sul)': 'https://forms.gle/qEKo9UuA1pciLxHy9',
-    'SQS 202 (Sul)': 'https://docs.google.com/forms/d/e/1FAIpQLSdRDIBSeWcVIs1Z4IPVkZi_J9Bie-kfQqqndIDg5cvIue8sLw/viewform?fbzx=-6410067248046343193',
-    'VNAVI': 'https://forms.gle/7fhMGXT4F5vd2ych9'
-  };
-
-  const ulElement = document.getElementById('locaisList');
-   Object.keys(locaisComLinks).forEach(local => {
-      const liElement = document.createElement('li');
-      const aElement = document.createElement('a');
-
-      aElement.href = locaisComLinks[local];
-      aElement.className = 'link';
-      aElement.target = '_blank'; 
-
-      if (locaisComLinks[local] === '#') {
-        aElement.style.filter = 'brightness(0.5)';
-      }
-
-      aElement.innerHTML = `${local}`;
-
-      liElement.appendChild(aElement);
-      ulElement.appendChild(liElement);
-    });
-
-</script>
+<script src="script.min.js?v=1.0"></script>
 </body>
 </html>
